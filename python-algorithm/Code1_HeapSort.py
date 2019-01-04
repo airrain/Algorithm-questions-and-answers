@@ -1,13 +1,7 @@
 """堆排序"""
 
-
-
 import random
-
 import copy
-
-
-
 def heapify(arr, index, length):
 
 	"""堆化
@@ -23,21 +17,15 @@ def heapify(arr, index, length):
 		largest = index if arr[index] >= arr[largest] else largest
 
 
-
 		if largest == index:
 
 			break
-
-
 
 		arr[largest], arr[index] = arr[index], arr[largest]
 
 		index = largest
 
 		left = 2 * index + 1
-
-
-
 
 
 def insertHeap(arr, index):
@@ -55,9 +43,6 @@ def insertHeap(arr, index):
 		index = par_i
 
 		par_i = (index - 1) // 2
-
-
-
 
 
 def heapSort(arr):
@@ -96,10 +81,6 @@ def heapSort(arr):
 
 
 
-
-
-
-
 def generateRandomArray(max_len, max_val):
 
 	"""生成随机数组
@@ -119,9 +100,6 @@ def generateRandomArray(max_len, max_val):
 
 
 	return arr
-
-
-
 
 
 if __name__ == '__main__':
