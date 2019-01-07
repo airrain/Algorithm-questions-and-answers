@@ -15,7 +15,7 @@ def isDeformation(str1,str2):
     
     return True
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	str1 = '123'
 	str2 = '231'
 	print(isDeformation(str1,str2))
