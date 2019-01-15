@@ -28,5 +28,18 @@ def fibonacci_2(n):
 def fibonacci_3(n):
 	pass
 
+"""问题2: 
+	给定整数N，代表台阶数，一次可以跨2个或者1个台阶，返回有多少种走法？
+"""
+def getResult(n):
+	if n < 0:
+		raise ValueError("The n is Illegall!")
+
+	if n < 3:
+		return 1
+
+	return getResult(n - 1) + getResult(n - 2)
+
+
 
 
