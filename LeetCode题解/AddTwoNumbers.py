@@ -10,3 +10,26 @@
 
 输入: (2 -> 4 -> 3) + (5 -> 6 -> 4) 输出: 7 -> 0 -> 8
 """
+class ListNode(object):
+    def __init__(self,x):
+        self.val = x
+        self.next = None
+
+    def myPrint(self):
+        print(self.val)
+        if self.next:
+            self.next.myPrint()
+
+class Solution(object):
+    def addTwoNumbers(self,l1,l2):
+
+
+
+    def addTwoNodes(self,n1,n2):
+        if not n1 and n2:
+             None
+        if not n1:
+            return n2.val
+        if not n2:
+            return n1.val
+        return n1.val + n2.val
