@@ -17,8 +17,23 @@ class Solution(object):
     def getMedianOfTwoSortedArrays(self,num1s,nums2):
         length1 = len(nums1)
         length2 = len(nums2)
-        k = (length1 + length2)//2
+        k = (length1 + length2) // 2
         if k % 2 == 0:
-            return findK()
+            return (self.findK(nums1,nums2,k) + self.finK(nums1,nums2,k - 1)) / 2.0
+        else:
+            return self.findK(nums1,nums2,k)
 
-    def findK(self,nums1,nums2):
+
+    def findK(self,num1,num2,k):
+        if not num1:
+            return num2[k]
+        if not num2:
+            return num1[k]
+        if k == 0:
+            return min(num1[0],num2[0])
+        length1 = len(num1)
+        length2 = len(num2)
+
+if __name__ == '__main__':
+    Solution().getMedianOfTwoSortedArrays([1,3,4],[2,4,5])
+
