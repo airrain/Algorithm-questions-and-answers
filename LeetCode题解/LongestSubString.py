@@ -20,12 +20,12 @@ class Solution(object):
 		index = -1
 		m = 0
 		for i,v in enumerate(s):
-			if locations[ord[v]] > index:
+			if (locations[ord[v]]) > index:
 				index = locations[ord[v]]
 			m = max(m,index - 1)
 			locations[index] = i
 		return m
 
 if __name__ == '__main__':
-	assert Solution().lengthOfLongestSubString("abced") == 4
+	 Solution().lengthOfLongestSubString("abced")
 

@@ -13,3 +13,12 @@
 
 输入: num1=[], num2=[2, 3] 输出: 2.5
 """
+class Solution(object):
+    def getMedianOfTwoSortedArrays(self,num1s,nums2):
+        length1 = len(nums1)
+        length2 = len(nums2)
+        k = (length1 + length2)//2
+        if k % 2 == 0:
+            return findK()
+
+    def findK(self,nums1,nums2):
