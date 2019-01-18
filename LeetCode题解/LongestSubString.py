@@ -16,8 +16,15 @@ class Solution(object):
 			return 0
 		if len(s) <= 1:
 			return len(s)
-
-
+		locations = [-1 for i in range(256)]
+		index = -1
+		m = 0
+		for i,v in enumerate(s):
+			if locations[ord[v]] > index:
+				index = locations[ord[v]]
+			m = max(m,index - 1)
+			locations[index] = i
+		return m
 
 if __name__ == '__main__':
 	assert Solution().lengthOfLongestSubString("abced") == 4

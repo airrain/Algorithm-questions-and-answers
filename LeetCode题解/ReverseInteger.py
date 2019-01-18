@@ -28,5 +28,5 @@ class Solution(object):
         return result * flag
 
 if __name__ == '__main__':
-    assert Solution().reverse(123)
-    assert Solution().reverse(-123)
+     Solution().reverse(123)
+     Solution().reverse(-123)
