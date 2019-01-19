@@ -33,6 +33,17 @@ class Solution(object):
             return min(num1[0],num2[0])
         length1 = len(num1)
         length2 = len(num2)
+        if num1[length1 // 2] > num2[length2 // 2]:
+            if k > length1 // 2 + length2 // 2:
+                return self.findK(num1,num2[length1 //2 + 1:],k - length2 // 2 - 1)
+            else:
+                return self.findK(num1[:length1 // 2],num2,k)
+        else:
+            if k > length1 // 2 + length2 // 2:
+                return self.findK(num1[length1 // 2 + 1:],num2.k - length1 // 2 - 1)
+            else:
+                return self.findK(num1,num2[:length2 // 2],k)
+
 
 if __name__ == '__main__':
     Solution().getMedianOfTwoSortedArrays([1,3,4],[2,4,5])
