@@ -24,11 +24,11 @@ class Solution(object):
         for i in range(len(s)):
             if i > 0 and map[s[i]] > map[s[i - 1]]:
                 result -= map[s[i - 1]]
-                result += map[a[i]] - map[s[i - 1]]
+                result += map[s[i]] - map[s[i - 1]]
             else:
                 result += map[s[i]]
         return result
 
 
 if __name__ == "__main__":
-    print(Solution().romanToInt("IIV"))
+    print(Solution().romanToInt("XII"))
