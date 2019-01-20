@@ -47,7 +47,7 @@ class Solution(object):
         if not n2:
             return n1.val
         return n1.val + n2.val
-if __name__ =='__main__':
+if __name__ =="__main__":
     list = ListNode(9)
     list.next = ListNode(8)
     print(Solution().addTwoNumbers(list, ListNode(1)).myPrint())
