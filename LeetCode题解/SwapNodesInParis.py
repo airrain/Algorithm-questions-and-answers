@@ -28,5 +28,5 @@ class Solution(object):
     def swapParis(self,head):
         prev = head.nextListNode(-1)
         prev.next = head
-        
+
 
