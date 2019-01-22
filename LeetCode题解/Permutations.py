@@ -20,5 +20,12 @@ class Solution(object):
 
     def get_permute(self,current,num,result):
         if not num:
+            result.append(current + [])
+            return
+        for i, v in enumerate(num):
+            current.append(num[i])
+            self.get_permute(current,num[:i] + num[i + 1:],result)
+            current.pop()
 
-
+if __name__ == "__main__":
+    print(Solution().permute([1,2,3]))
