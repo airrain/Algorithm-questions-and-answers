@@ -21,4 +21,4 @@ class Solution(object):
 
 if __name__ == "__main__":
     Solution().jump([2,4,3,3,2])
-    
+
