@@ -32,7 +32,7 @@ class Solution(object):
             longest = max(longest,index + nums[longest])
             index += 1
         return False
-    
+
 if  __name__ == "__main__":
     Solution().canJump([2,3,1,5,2])
 
