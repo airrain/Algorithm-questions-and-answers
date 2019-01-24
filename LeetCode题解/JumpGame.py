@@ -29,10 +29,10 @@ class Solution(object):
         while index <= longest:
             if longest >= length - 1:
                 return True
-            longest = max()
-
-
-
+            longest = max(longest,index + nums[longest])
+            index += 1
+        return False
+    
 if  __name__ == "__main__":
     Solution().canJump([2,3,1,5,2])
 
