@@ -15,3 +15,8 @@
 
 从低位到高位，如果后一位有进位的话，那么该位要加上一，否则退出循环。如果最高位也进位，那么在列表前要插入一个一。
 """
+class Solution(object):
+    def plusOne(self,digits):
+        carry = 1
+        
+
