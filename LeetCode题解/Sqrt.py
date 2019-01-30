@@ -17,9 +17,10 @@
 class Solution(object):
 	def muSqrt(self,n):
 		result = 1.0
-		while abs(result * result - x) > 0.1
-		
+		while abs(result * result - x) > 0.1:
+			result = (result + x/result) / 2
+		return int(result)
 
 if __name__ == "__main__":
-	Solution().
+	Solution().mySqrt(5)
 		
