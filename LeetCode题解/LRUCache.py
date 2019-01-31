@@ -16,5 +16,17 @@
 """
 class LRUCache(object):
 	class Node(object):
-		def __init__(self,):
+		def __init__(self,capacity):
+
+		def __remove__(self,node):
+
+		def __insert(self,node):
+
+		def __get__(self,key):
+
+		def set(self,key,value):
+
+
+if __name__ == "__main__":
+	lru_cache = LRUCache(3)
 		 
