@@ -27,15 +27,38 @@ class MainStack(object):
 		
 
 	def pop(self):
+		if self.stack:
+			if self.minStack[-1] == self.stack[-1]:
+				self.minStack.pop()
+			self.stack.pop()
 
-	def push(self):
+	def push(self,x):
+		self.satck.append(x)
+		if not self.minStack:
+			self.minStack.append(x)
+		else:
+			if self.minStack[-1] >= x:
+				self.minStack.append(x)
 
 	def getMin(self):
+		if self.minStack:
+			return self.minStack[-1]
 
 	def top(self):
+		if self.stack:
+			return self.stack[-1]
 
 
-
+if __name__ == "__main__":
+	minStack = MinStack()
+	minStack.push(4)
+	minStack.push(5)
+	minStack.push(1)
+	minStack.push(3)
+	minStack.getMin()
+	minStack.pop()
+	minStack.push()
+	minStack.pop()
 
 
 

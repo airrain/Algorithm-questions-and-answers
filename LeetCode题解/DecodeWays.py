@@ -16,3 +16,12 @@
 """
 class Solution(object):
 	def numDecodings(self,s):
+		length = len(s)
+		if length == 0
+			return 0
+		dp = [0 for __ in range(length + 1)]
+		dp[length] = 1
+		dp[length - 1] = 1 if
+
+if __name__ == "__main__":
+	Solution().numDecoding("110")

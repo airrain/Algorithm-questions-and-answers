@@ -22,10 +22,11 @@
 """
 class Solution(object):
     def grayCode(self,n):
+        result = [(i >> 1) ^ i for i in range(pow(2,n)) ]
+        return result
 
-
-if __name__ == "__name__":
-    Solution().grayCode(4)
+if __name__ == "__main__":
+    print(Solution().grayCode(4))
 
 
 

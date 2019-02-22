@@ -32,3 +32,7 @@ class Solution(object):
 
 if __name__ == "__main__":
     print(Solution().maxSubArray([2,3,-1,-3,5,4,4]))
+    """dir()
+   
+    """
+

@@ -14,3 +14,22 @@
 """
 class Solution(object):
     def threeSum(self,nums):
+        nums.sort()
+        result = []
+        i = 0
+        while i < len(nums) - 2:
+            j = i + 1
+            k = len(nums) - 1
+            while j < k:
+                l = [nums[i],nums[j],nums[k]]
+                if sum(l) == 0:
+                    result.append(l)
+                    j += 1
+                    k -= 1
+                    while j < k and nums[j] == nums[j - 1] :
+                        j += 1
+                    while j < k and nums[k] == nums[k + 1]:
+                        k -= 1
+
+if __name__ == "__main__":
+    Solution().threeSum([-2,-1,2,3,3,-2,-1])
