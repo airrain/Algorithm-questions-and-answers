@@ -36,7 +36,13 @@ class TreeNode(object):
 
 class Solution(object):
     def levelOrder(self,root):
-        
+        result = []
+        if not root:
+            return result
+        curr_level = [root]
+        while curr_level:
+            level_result = []
+            next_level = []
 
 
 
