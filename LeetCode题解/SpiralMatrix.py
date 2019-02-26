@@ -37,4 +37,5 @@ class Solution(object):
     def spiralOrder(self,matrix):
         if not matrix:
             return []
-        
+        left = top = 0
+        right = len(matrix[0]) - 1
