@@ -39,3 +39,9 @@ class Solution(object):
             return []
         left = top = 0
         right = len(matrix[0]) - 1
+        bottom = len(matrix) - 1
+
+        result = []
+        while left < right and top < bottom:
+            for i in range(left,right):
+                
