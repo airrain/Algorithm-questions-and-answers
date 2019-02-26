@@ -44,4 +44,38 @@ class Solution(object):
         result = []
         while left < right and top < bottom:
             for i in range(left,right):
-                
+                result.append(matrix[top][i])
+            for i in range(top,bottom):
+                result.append(matrix[i][right])
+            for i in range(right,left,-1):
+                result.append(matrix[i][left])
+            left += 1
+            right += 1
+            top += 1
+            bottom -= 1
+        if left == right and top == bottom:
+            result.append(matrix[top][left])
+        elif left == right:
+            for i in range(top,bottom + 1):
+                result.append(matrix[i][left])
+        elif top == bottom:
+            for i in range(left,right + 1):
+                result.append(matrix[top][i])
+        return result
+
+if __name__ == "__main__":
+    Solution().spiralOrder([[1,2,3],
+                            [4,5,6],
+                            [7,8,9]])
+
+
+
+
+
+
+
+
+
+
+
+
