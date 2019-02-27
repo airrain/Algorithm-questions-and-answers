@@ -24,7 +24,11 @@ class Solution(object):
             return s
         result = ''
         index = 0
-        
+        n = len(s)
+        for i in range(0,numRows):
+            if i == 0 or i == numRows - 1:
+                while index < n:
+
 
 
 
