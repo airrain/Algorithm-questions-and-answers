@@ -28,7 +28,22 @@ class Solution(object):
         for i in range(0,numRows):
             if i == 0 or i == numRows - 1:
                 while index < n:
+                    result += s[index]
+                    index += 2 * numRows - 2
+                index = i + 1
+            else:
+                while index < n:
+                    result += s[index]
+                    index += 2 * numRows
+                    if index >= n:
+                        break
+                    result += s[index]
+                    index += 2 * i
+                index = i + 1
+            return result
 
+if __name__ == "__main__":
+    print(Solution().convert("PAYPALISHIRING",2))
 
 
 
