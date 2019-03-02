@@ -35,9 +35,10 @@ class Solution(object):
                 l = mid + 1
             else:
                 h = mid - 1
-    return False
+        return False
 
-if __
+if __name__ == "__main__":
+    print(Solution().searchMatrix([[1],[2],[3],[4]],4))
 
 
 
