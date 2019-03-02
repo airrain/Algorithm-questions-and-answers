@@ -19,3 +19,17 @@
 """
 class Solution(object):
     def longestPalindrome2(self,s):
+        if not s:
+            return
+        n = len(s)
+        if n == 1:
+            return s
+        l = 0
+        r = 0
+        m = 0
+        c = 0
+        b = True
+        for i in range(0,n):
+            for j in range(0,min(n - i,i + 1)):
+                
+
