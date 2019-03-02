@@ -22,3 +22,17 @@ target = 3
 
 把矩阵从左到右、从上到下连起来就是一个递增的数组，可以用二分搜索来查找。现在只要找出数组下标到矩阵的映射关系就可以了：i -> [i // n][i % n]，其中i是数组中的下标，n是矩阵的宽。
 """
+class Solution(object):
+    def searchMatrix(self,matrix,target):
+        m = len(matrix)
+        n = len(matrix[0])
+        l,h = 0,m * n - 1
+        while l <= h:
+            
+
+
+
+
+
+
+
