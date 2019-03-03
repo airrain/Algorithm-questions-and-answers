@@ -33,4 +33,12 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    
+    def getIntersectionNode(self,headA,headB):
+        nodeA,nodeB = neadA,headB
+        while nodeA != nodeB:
+            nodeA = nodeA.next if nodeA else headB
+            nodeB = nodeB.next if nodeB else headA
+        return nodeA
+
+    def getIntersectionNode_diff(self,headA,headB):
+        def get_length(node):
