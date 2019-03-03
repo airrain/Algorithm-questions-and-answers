@@ -31,5 +31,5 @@ class Solution(object):
         b = True
         for i in range(0,n):
             for j in range(0,min(n - i,i + 1)):
-                
+
 
