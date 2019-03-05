@@ -42,3 +42,11 @@ class Solution(object):
 
     def getIntersectionNode_diff(self,headA,headB):
         def get_length(node):
+            length = 0
+            while node:
+                node = node.next
+                length += 1
+            return length
+        len1 = get_length(headA)
+        len2 = get_length(headB)
+        

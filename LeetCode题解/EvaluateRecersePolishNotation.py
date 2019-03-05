@@ -19,7 +19,7 @@ class Solution(object):
     def evalRPN(self,tokens):
         stack = []
         for token in tokens:
-            
+
 
 
 
