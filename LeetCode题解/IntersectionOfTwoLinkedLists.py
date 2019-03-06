@@ -49,4 +49,4 @@ class Solution(object):
             return length
         len1 = get_length(headA)
         len2 = get_length(headB)
-        
+

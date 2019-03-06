@@ -19,6 +19,12 @@ class Solution(object):
     def evalRPN(self,tokens):
         stack = []
         for token in tokens:
+            if token not in ("+","-","*","/"):
+                stack.append(int(token))
+            else:
+                second = stack.pop()
+                first = stack.pop()
+
 
 
 
