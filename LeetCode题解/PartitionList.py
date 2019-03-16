@@ -20,4 +20,16 @@ class ListNode(object):
         self.next = None
 
     def to_list(self):
-        return [self.val] +
+        return [self.val] + self.next.to_list() if self.next else [self.val]
+
+class Solution(object):
+    def partition(self,head,x):
+        dummy = ListNode(-1)
+        dummy.next = head
+        small_dummy = ListNode(-1)
+        large_dummy = ListNode(-1)
+
+        prex = dummy
+        small_prev = small_dummy
+        large_prev = large_dummy
+
