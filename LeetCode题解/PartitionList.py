@@ -32,4 +32,10 @@ class Solution(object):
         prex = dummy
         small_prev = small_dummy
         large_prev = large_dummy
+        while prev.next:
+            curr = prev.next
+            if curr.val < x:
+                small_prve.next = curr
+                small_prev  = small_prev.next
+            else:
 
