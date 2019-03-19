@@ -38,4 +38,13 @@ class Solution(object):
                 small_prve.next = curr
                 small_prev  = small_prev.next
             else:
+                large_prev.next = curr
+                large_prev = large_prev.next
+            prev = prev.next
+        large_prev.next = None
+        small_prev.next = large_dummy.next
+        return small_dummy.next
+
+if __name__ == "__main__":
+    n1 = ListNode(1)
 
