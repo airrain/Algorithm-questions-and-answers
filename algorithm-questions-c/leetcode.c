@@ -13,3 +13,15 @@
  }
  
  //字符串前面的若干字符移动到字符串后面解法二
+ void ReverseString(char *s,int from,int to){
+     char t = from;
+     s[from++] = s[to];
+     s[to--] = t;
+ }
+ void LeftRotateString(char *s,int n,int m){
+     m %= n;
+     ReverseString(s,0,m-1);
+     ReverseString(s,m,n-1);
+     ReverseString(s,0,n-1);
+
+ }
