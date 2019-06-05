@@ -23,5 +23,7 @@
      ReverseString(s,0,m-1);
      ReverseString(s,m,n-1);
      ReverseString(s,0,n-1);
-
  }
+
+ //判断短字符串包含在长字符串中解法一
+ 
