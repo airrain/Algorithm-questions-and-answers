@@ -16,3 +16,4 @@ bool isPalindrom(const char *s,int n){
     return true;
 
 }
+//判断回文串解法一
