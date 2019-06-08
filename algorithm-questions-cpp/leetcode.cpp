@@ -67,9 +67,32 @@ int BinarySearch(int arr[], int n, int value)
             left = mid + 1;
         }
         else
-            {
-                return mid;
-            }
+        {
+            return mid;
+        }
     }
     return -1;
+}
+
+//最大连续子数组和
+int MaxSubArray(int *a, int n)
+{
+    int currentRes = 0;
+    int maxRes = a[0];
+    for (int j = 0; j < n; j++)
+    {
+        if (currentRes >= 0)
+        {
+            currentRes += a[j];
+        }
+        else
+        {
+            currentRes = 0;
+        }
+        if (currentRes > maxRes)
+        {
+            maxRes = currentRes;
+        }
+    }
+    return maxRes;
 }
