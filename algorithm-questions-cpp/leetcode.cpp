@@ -1,3 +1,4 @@
+#include<iostream>
 //输入字符串，打印出其全排列
 
 //判断回文串解法一
@@ -95,4 +96,27 @@ int MaxSubArray(int *a, int n)
         }
     }
     return maxRes;
+}
+
+//荷兰国旗
+
+void helan(int arr[],int n){
+    int begin = 0;
+    int end = n-1;
+    int curr = 0;
+    while(begin < end){
+        if(arr[curr] == 0){
+            swap(arr[curr],arr[begin]);
+            curr++;
+            begin++;
+        }
+        else if(arr[curr] == 1){
+            curr++;
+        }
+        else{
+            swap(arr[curr],arr[end]);
+            end--;
+        }
+    }
+
 }
