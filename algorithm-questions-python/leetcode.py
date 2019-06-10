@@ -48,4 +48,4 @@ def getNum(arr):
 
 if __name__ == "__main__":
     arr = [123567]
-    print(arr.getNum())
+    print(getNum(arr))
