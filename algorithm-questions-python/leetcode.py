@@ -39,13 +39,13 @@ def getNum(arr):
     suma = 0
     sumb = 0
     i = 0
-    while(i < len(arr)):
-        suma += arr[i]
-        sumb += i
+    while i < len(arr):
+        suma = suma + arr[i]
+        sumb = sumb + i
         i += 1
     sumb = sumb + len(arr) + len(arr) + 1
     return sumb - suma 
 
 if __name__ == "__main__":
-    arr = [123567]
+    arr = [1,2,3,5,6,7]
     print(getNum(arr))
