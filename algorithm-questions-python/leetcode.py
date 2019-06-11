@@ -49,3 +49,26 @@ def getNum(arr):
 if __name__ == "__main__":
     arr = [1,2,3,5,6,7]
     print(getNum(arr))
+
+#计算一个数的n次方
+def pow(a,n)：
+    if n==1:return a
+    if n==0:return 1
+    if n>1:
+        retult = 1.0
+        while i < n:
+            result *= i
+            i += 1
+        return result
+    else:
+        result = 1.0
+        while i < n:
+            result /= i
+            i += 1
+        return result
+
+if __name__ == "__main__"：
+print(pow(2,3))
+
+
+    
