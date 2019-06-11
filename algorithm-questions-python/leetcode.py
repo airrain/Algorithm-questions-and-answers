@@ -51,9 +51,11 @@ if __name__ == "__main__":
     print(getNum(arr))
 
 #计算一个数的n次方
-def pow(a,n)：
-    if n==1:return a
-    if n==0:return 1
+def pow(a,n):
+    if n==1:
+        return a
+    if n==0:
+        return 1
     if n>1:
         retult = 1.0
         while i < n:
@@ -67,8 +69,24 @@ def pow(a,n)：
             i += 1
         return result
 
-if __name__ == "__main__"：
-print(pow(2,3))
+if __name__ == "__main__":
+    print(pow(2,3))
 
+#找出绝对值最小的数
+def getMin(arr):
+    if arr == None or len(arr) == 0:
+        return 0
+    i = 0
+    mins = 2**32
+    while i < len(arr):
+        if abs(arr[i]) < abs(mins):
+            mins = arr[i]
+            i += 1
+    return mins
+
+if __name__ == "__name__":
+    arr = [1,4,-5,6,4,3]
+    print(getMin(arr)) 
+    
 
     
