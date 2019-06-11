@@ -119,7 +119,7 @@ def squareRoot(n,e):
     last_one = 1.0
     while new_one-last_one > e:
         new_one = (new_one+last_one)/2
-        last_one = new_one/n
+        last_one = n/new_one
     return new_one
 if __name__ == "__main__":
     n = 5
