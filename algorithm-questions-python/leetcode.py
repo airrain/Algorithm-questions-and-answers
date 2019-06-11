@@ -138,7 +138,7 @@ def get2Num(arr):
         else:
             dic[arr[i]] = 1
             i += 1
-    for k,v in dic: 
+    for k,v in dic.items(): 
         if v == 1:
             return k
 
