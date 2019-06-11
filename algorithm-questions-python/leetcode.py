@@ -138,10 +138,10 @@ def get2Num(arr):
         else:
             dic[arr[i]] = 1
             i += 1
-    for k,v in dic:
+    for k,v in dic: 
         if v == 1:
             return k
 
 if __name__ == "__main__":
-    arr = [2,4,4,5,6,3]
+    arr = [2,4,4,6,6,3]
     print(get2Num(arr))
