@@ -126,3 +126,22 @@ if __name__ == "__main__":
     e = 0.000000001
     print(squareRoot(n,e))
     
+#找出数组中出现奇数次的数
+def get2Num(arr):
+    if arr == None or len(arr) <= 0:
+        return 0
+    dic = dict()
+    i = 0
+    while i < len(arr):
+        if arr[i] not in dic:
+            dic[arr[i]] = 1
+        else:
+            dic[arr[i]] = 1
+            i += 1
+    for k,v in dic:
+        if v == 1:
+            return k
+
+if __name__ == "__main__":
+    arr = [2,4,4,5,6,3]
+    print(get2Num(arr))
