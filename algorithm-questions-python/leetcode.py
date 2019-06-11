@@ -57,7 +57,8 @@ def pow(a,n):
     if n==0:
         return 1
     if n>1:
-        retult = 1.0
+        result = 1.0
+        i = 0
         while i < n:
             result *= i
             i += 1
@@ -81,12 +82,36 @@ def getMin(arr):
     while i < len(arr):
         if abs(arr[i]) < abs(mins):
             mins = arr[i]
-            i += 1
+        i += 1
     return mins
 
 if __name__ == "__name__":
     arr = [1,4,-5,6,4,3]
     print(getMin(arr)) 
     
+#找出数组中唯一重复的数字
+def findSame(arr):
+    if arr == None:
+        return -1
+    i = 0
+    lens = len(arr)
+    HashTable = dict()
+    while i < lens:
+        HashTable[i] = 0
+        i += 1
+    j = 0
+    while j < lens:
+        if HashTable[arr[i]-1] == 0:
+            HashTable[arr[i]-1] = 1
+            
+        else:
+            return arr[j]
+        j += 1
+    return -1
+
+if __name__ == "__name__":
+    arr = [1,2,3,1000]
+    print(findSame(arr))
+
 
     
