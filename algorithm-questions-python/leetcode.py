@@ -113,5 +113,16 @@ if __name__ == "__name__":
     arr = [1,2,3,1000]
     print(findSame(arr))
 
-
+#计算一个数的平方根
+def squareRoot(n,e):
+    new_one = n
+    last_one = 1.0
+    while new_one-last_one > e:
+        new_one = (new_one+last_one)/2
+        last_one = new_one/n
+    return new_one
+if __name__ == "__main__":
+    n = 5
+    e = 0.000000001
+    print(squareRoot(n,e))
     
