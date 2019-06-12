@@ -209,4 +209,40 @@ if __name__ == "__main__":
 
 
 #如何拿到最多的金币
+import random
+def getMaxNum(n):
+    if n < 0:
+        return 0
+    a = [None] * n
+    i = 0
+    while i < n:
+        a[i] = random.uniform(1,n)
+        i += 1
+    i = 0
+    max4 = 0
+    while i < 4:
+        if a[i] > max4:
+            max4 = a[i]
+        i += 1
+    i = 4
+    while i < n-1:
+        if a[i] > max4:
+            return True
+        i += 1
+    return False
+
+if __name__ == "__main__":
+    test_num = 1000 + 0.0
+    i = 0
+    success = 0
+    while i < test_num:
+        if getMaxNum(10):
+            success += 1
+        i += 1
+    print(success/test_num)
+    
+
+
+        
+
 
