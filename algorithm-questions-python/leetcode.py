@@ -173,7 +173,40 @@ def findCommon(arr1,arr2,arr3):
             k += 1
         return common
 
-if __name__ == "__mian__":
+if __name__ == "__main__":
     arr1 = [2,3,5,7,11]
     arr2 = [3,5,7,11,23]
     arr3 = [5,7,11,13,15]
+    print(findCommon(arr1,arr2,arr3))
+
+
+#直接交换法对字符串进行反转
+
+#实现两个正整数的除法
+def divide(m,n):
+    res = 0
+    remain = m
+    while m >= n:
+        m = m - n
+        res += 1
+    remain  = m
+    print(res)
+
+if __name__ == "__main__":
+    divide(4,2)
+
+#不用循环输出100个数
+def prints(n):
+    print(str(n))
+    if n > 0:
+        prints(n-1)
+
+if __name__ == "__main__":
+    prints(100)
+      
+
+#找出和相等的数对
+
+
+#如何拿到最多的金币
+
