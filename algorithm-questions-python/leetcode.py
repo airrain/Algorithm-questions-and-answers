@@ -240,7 +240,18 @@ if __name__ == "__main__":
             success += 1
         i += 1
     print(success/test_num)
+
+#正整数n所有可能的整数组合
+
+#用一个随机函数得到另一个随机函数
+import random
+def func1():
+    return int(random(random))
+def func2():
     
+
+
+
 
 
         
