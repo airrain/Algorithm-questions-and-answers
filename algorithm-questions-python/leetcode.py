@@ -145,3 +145,35 @@ def get2Num(arr):
 if __name__ == "__main__":
     arr = [2,4,4,6,6,3]
     print(get2Num(arr))
+
+#求集合的所有子集
+
+
+#按要求去构造新的数组
+
+#三个有序数组中找出公共元素
+def findCommon(arr1,arr2,arr3):
+    i = 0
+    j = 0
+    k = 0
+    len1 = len(arr1)
+    len2 = len(arr2)
+    len3 = len(arr3)
+    while i < len1 and j < len2 and k < len3:
+        if arr1[i] == arr2[j] and arr2[j] == arr3[k]:
+            common = arr1[i]
+            i += 1
+            j += 1
+            k += 1
+        elif arr1[i] < arr2[k]:
+            i += 1
+        elif arr2[k] < arr3[k]:
+            j += 1
+        else:
+            k += 1
+        return common
+
+if __name__ == "__mian__":
+    arr1 = [2,3,5,7,11]
+    arr2 = [3,5,7,11,23]
+    arr3 = [5,7,11,13,15]
