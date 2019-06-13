@@ -256,8 +256,8 @@ def righrShift(arr,k):
     if arr == None:
         return 0
     while k != 0:
-        i = lens
-        tmp = arr[i]
+        i = lens - 1
+        tmp = arr[lens-1]
         while i > 0:
             arr[i] = arr[i-1]
             i -= 1
@@ -268,8 +268,11 @@ if __name__ == "__main__":
     arr = [1,3,5,7,9]
     lens = len(arr)
     i = 0
+    k = 3
+    righrShift(arr,k)
     while i < lens:
-        print(righrShift(arr,3))
+        print(arr)
+        i += 1
 
         
 
