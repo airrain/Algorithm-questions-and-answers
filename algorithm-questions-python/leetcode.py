@@ -246,10 +246,14 @@ if __name__ == "__main__":
 #用一个随机函数得到另一个随机函数
 import random
 def func1():
-    return int(random(random))
+    return int(round.random(random()))
 def func2():
-    
 
+#循环移动数组k位
+def righrShift(arr,k):
+    if arr == None:
+        return 0
+    
 
 
 
