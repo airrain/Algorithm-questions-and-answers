@@ -248,12 +248,32 @@ import random
 def func1():
     return int(round.random(random()))
 def func2():
+    return 0
 
 #循环移动数组k位
 def righrShift(arr,k):
+    lens = len(arr)   
     if arr == None:
         return 0
-    
+    while k != 0:
+        i = lens
+        tmp = arr[i]
+        while i > 0:
+            arr[i] = arr[i-1]
+            i -= 1
+        arr[0] = tmp
+        k -= 1
+
+if __name__ == "__main__":
+    arr = [1,3,5,7,9]
+    lens = len(arr)
+    i = 0
+    while i < lens:
+        print(righrShift(arr,3))
+
+        
+
+
 
 
 
