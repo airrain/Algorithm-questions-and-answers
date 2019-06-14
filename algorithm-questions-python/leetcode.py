@@ -274,7 +274,9 @@ if __name__ == "__main__":
         print(arr)
         i += 1
 
-        
+#求解二进制数中1的个数
+def countOne(n):
+            
 
 
 
