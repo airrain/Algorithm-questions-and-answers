@@ -280,7 +280,14 @@ def countOne(n):
 
 #求解1024！末尾0的个数
 def zeroCount(n):
-            
+
+
+#比较两个数的大小
+def maxNum(a,b):
+    return (a+b+abs(a-b))/2
+
+if __name__ == "__main__":
+    print(maxNum(3,5))
 
 
 
