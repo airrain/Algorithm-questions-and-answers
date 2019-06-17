@@ -276,6 +276,10 @@ if __name__ == "__main__":
 
 #求解二进制数中1的个数
 def countOne(n):
+
+
+#求解1024！末尾0的个数
+def zeroCount(n):
             
 
 
