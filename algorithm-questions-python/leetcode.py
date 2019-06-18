@@ -276,6 +276,15 @@ if __name__ == "__main__":
 
 #求解二进制数中1的个数
 def countOne(n):
+    count = 0
+    while n > 0:
+        if n&1 == 1:
+            count += 1
+        n >> 1
+    return count
+
+if __name__ == "__main__":
+    print(countOne(7))
 
 
 #求解1024！末尾0的个数
