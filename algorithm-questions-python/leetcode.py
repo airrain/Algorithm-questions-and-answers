@@ -298,6 +298,8 @@ def maxNum(a,b):
 if __name__ == "__main__":
     print(maxNum(3,5))
 
+'''给一个int型数组，要求找出其中两个和为特定值的数的坐标'''
+
 
 
 
