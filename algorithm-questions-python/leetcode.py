@@ -317,8 +317,24 @@ class Solution(object):
     if __name__ == "__main__":
         print(Solution().intToRoman(100))
 
+'''翻转一个intger类型的数字'''
+class Solution(object):
+    def reverse(self,x):
+        flag = 0
+        if x > 0:
+            flag = 1
+        elif x < 0:
+            flag = -1
+        x *= flag
+        result = 0
+        while x:
+            result = result * 10 + x / 10
+            x /= 10
+        result *= flag
+        return result
 
-
+    if __name__ == "__main__":
+        print(Solution().reverse(123))
 
 
         
