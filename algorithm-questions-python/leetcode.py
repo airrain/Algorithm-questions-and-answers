@@ -302,6 +302,20 @@ if __name__ == "__main__":
 
 
 '''将一个int型的数字转化为罗马数字'''
+class Solution(object):
+    def intToRoaman(self,num):
+        result = ''
+        nums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+        strings = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+        result = ''
+        for i in range(len(num)):
+            while num >= nums[i]:
+                num -= nums[i]
+                result += strings[i]
+        return result
+    
+    if __name__ == "__main__":
+        print(Solution().intToRoman(100))
 
 
 
