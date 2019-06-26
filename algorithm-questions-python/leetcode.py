@@ -336,6 +336,7 @@ class Solution(object):
     if __name__ == "__main__":
         print(Solution().reverse(123))
 
+'''找出一个列表中所有和为零的三元组。要求求出的三元组中没有重复'''
 
         
 
