@@ -379,6 +379,25 @@ if __name__ == "__main__":
     result = Solution().removeNThnumber(n1,2)
     result.myPrint()
 
+'''删除一个数组中某一特定数值的元素，返回删除后的数组长度'''
+class Solution(object):
+    def removeElement(self,nums,val):
+        left = 0
+        right = len(nums) - 1
+        while left <= right:
+            while left <= right and nums[left] != val:
+                left += 1
+            while left <= right and nums[right] == val:
+                right -= 1
+            if left < right:
+                nums[left] = nums[right]
+                left += 1
+                right -= 1
+        return right + 1
+    
+if __name__ == "__main__":
+    Solution().removeElement([1,2,3,4,3,1],1)
+
         
 
 
