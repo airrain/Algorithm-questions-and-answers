@@ -338,6 +338,21 @@ class Solution(object):
 
 '''找出一个列表中所有和为零的三元组。要求求出的三元组中没有重复'''
 
+
+
+'''将一个链表中的倒数第n个元素从链表中去除'''
+class solution(object):
+    def __init__(self,val):
+        self.next = next
+        self.val = val
+    def myPrint(self,x):
+        print(self.val)
+        if self.next:
+            myPrint(x.next)
+    def removeNThnumber(self,head,n):
+        if not head:
+            return head
+        
         
 
 
