@@ -396,9 +396,27 @@ class Solution(object):
         return right + 1
     
 if __name__ == "__main__":
-    Solution().removeElement([1,2,3,4,3,1],1)
+    Solution().removeElement([1,2,3,4,3,1]
 
-        
+'''判断给出的数组是否否存在一种跳法跳到最后'''
+class Solution(object):
+    def canJum(self,nums):
+        length = len(nums)
+        index = 0
+        longest = nums[0]
+        if not nums:
+            return False
+        while index <= longest:
+            if longest >= length - 1:
+                return True
+            longest = max(longest,index + nums[index])
+            index += 1
+        return False
+    
+if __name__ == "__main__":
+    Solution().canJum([1,3,2,4,2])
+
+
 
 
         
