@@ -416,6 +416,7 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().canJum([1,3,2,4,2])
 
+'''把一个数字用几个几的形式表示出来'''
 
 
 
