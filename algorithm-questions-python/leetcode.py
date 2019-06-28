@@ -420,6 +420,24 @@ if __name__ == "__main__":
 
 
 
+'''求x的n次幂'''
+class Solution(object):
+    def myPow(self,x,n):
+        result = 1
+        flag = 1 if x >= 0 else -1
+        n = abs(n)
+        while n > 0:
+            if n & 1 == 1:
+                result *= x
+            n >>= 1
+            x *= x
+        if flag < 0:
+            result = 1/result
+        return result
+if __name__ == "__main__":
+    print(Solution().myPow(2,3))
+
+
         
 
 
