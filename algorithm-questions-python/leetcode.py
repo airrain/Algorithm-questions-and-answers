@@ -456,6 +456,22 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().longestBefore(['qwer'],['qwse'],['qwdr'])
 
-        
+'''将一个数组中的数字右旋k位，即所有的数字向后移k位，末尾的数字移到开头'''
+class Solution(object):
+    def rotate(self,nums,k):
+            def reverse(nums,start,end):
+                while start < end:
+                    nums[start],nums[end] = nums[end],nums[start]
+                    start += 1
+                    end -= 1
+            n = len(nums)
+            k %= n
+            reverse(nums,0,n - k - 1)
+            reverse(nums,k - 1,n - 1)
+            reverse(nums,0,n - 1)
+            
+if __name__ == "__main__":
+    nums = [1,2,3,4,5,6]
+    Solution().rotate(nums,5)
 
 
