@@ -437,7 +437,16 @@ class Solution(object):
 if __name__ == "__main__":
     print(Solution().myPow(2,3))
 
+'''在一个集合（没有重复数字）中找到和为特定值的所有组合'''
 
+'''实现两个int型数字的除法，不可以使用乘法、除法和模操作'''
+
+'''找出一组字符串中最长的公共前缀'''
+class Solution(object):
+    def longestBefore(self,strs):
+        if not strs:
+            return ''
+        
         
 
 
