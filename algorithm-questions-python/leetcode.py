@@ -446,7 +446,16 @@ class Solution(object):
     def longestBefore(self,strs):
         if not strs:
             return ''
-        
+        longest = strs[0]
+        for i in range(len(strs[0])):
+            for str in strs:
+                if len(strs[i]) < i or str[i] != strs[0][i]:
+                    return strs[0][:i]
+        return strs[0]
+
+if __name__ == "__main__":
+    Solution().longestBefore(['qwer'],['qwse'],['qwdr'])
+
         
 
 
