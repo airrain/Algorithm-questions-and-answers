@@ -474,4 +474,24 @@ if __name__ == "__main__":
     nums = [1,2,3,4,5,6]
     Solution().rotate(nums,5)
 
+'''找出一个无序数组中缺少的最小的正整数'''
+class Solution(object):
+    def firstMissingPositive(self,nums):
+        if not nums:
+            return 1
+        length = len(nums)
+        i = 0
+        while i < length:
+            current = nums[i]
+            if current < 0 or current > length or nums[current - 1] == current:
+                i += 1
+            else:
+                nums[current - 1],nums[i] = nums[i],nums[current - 1]
+        for i in range(length):
+            if nums[i] != i + 1:
+                return i + 1
+        return length + 1
+
+if __name__ == "__main__":
+    Solution().firstMissingPositive([1,2,4,3,5])
 
