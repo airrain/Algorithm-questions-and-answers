@@ -498,4 +498,13 @@ if __name__ == "__main__":
 '''给一个由包含一串数字的列表组成的非负整数加上一'''
 class Solution(object):
     def plusOne(self,digits):
-        
+        for i in range(len(digits - 1),-1,-1):
+            carry = 1
+            digits[i] += carry
+            if digits[i] > 10:
+                carry = 0
+            else:
+                digits.insert(0,1)
+        return digits
+if __name__ == "__main__":
+    Solution().plusOne([1,3,5,6,8,9])
