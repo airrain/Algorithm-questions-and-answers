@@ -495,3 +495,7 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().firstMissingPositive([1,2,4,3,5])
 
+'''给一个由包含一串数字的列表组成的非负整数加上一'''
+class Solution(object):
+    def plusOne(self,digits):
+        
