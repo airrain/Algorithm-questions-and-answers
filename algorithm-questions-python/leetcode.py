@@ -501,9 +501,12 @@ class Solution(object):
         for i in range(len(digits - 1),-1,-1):
             carry = 1
             digits[i] += carry
-            if digits[i] > 10:
+            if digits[i] < 10:
                 carry = 0
+                break
             else:
+                digits -= 10
+        if carry == 1:
                 digits.insert(0,1)
         return digits
 if __name__ == "__main__":
