@@ -513,3 +513,6 @@ if __name__ == "__main__":
     Solution().plusOne([1,3,5,6,8,9])
 
 '''数组中的每个值表示在当前位置最多能向前面跳几步，判断至少跳几步能够跳到最后'''
+class Solution(object):
+    def jump(self,nums):
+        
