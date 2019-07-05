@@ -527,4 +527,11 @@ class Solution(object):
         longest = nums[0]
         index = 0
         while index <= length:
-            
+            if longest >= length - 1:
+                return True
+            longest = max(longest,index + nums[index])
+            index += 1
+        return False
+
+if __name__ == "__main__":
+    Solution().jump([1,3,4,2])
