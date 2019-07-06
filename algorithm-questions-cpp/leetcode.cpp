@@ -1,4 +1,4 @@
-#include<iostream>
+//#include<iostream.h>
 //输入字符串，打印出其全排列
 
 //判断回文串解法一

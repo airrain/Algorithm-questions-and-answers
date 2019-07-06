@@ -5,8 +5,8 @@ def reverseStr(str):
     i = 0
     j = n-1
     while i < j:
-        arr[i] = tmp
-        tmp = arr[j]
+        tmp = arr[i]
+        arr[i] = arr[j]
         arr[j] = tmp
         i+=1
         j-=1
@@ -289,7 +289,7 @@ if __name__ == "__main__":
 
 #求解1024！末尾0的个数
 def zeroCount(n):
-
+    return None
 
 #比较两个数的大小
 def maxNum(a,b):
@@ -396,7 +396,7 @@ class Solution(object):
         return right + 1
     
 if __name__ == "__main__":
-    Solution().removeElement([1,2,3,4,3,1]
+    Solution().removeElement([1,2,3,4,3,1])
 
 '''判断给出的数组是否否存在一种跳法跳到最后'''
 class Solution(object):
@@ -515,8 +515,7 @@ if __name__ == "__main__":
 '''数组中的每个值表示在当前位置最多能向前面跳几步，判断至少跳几步能够跳到最后'''
 class Solution(object):
     def jump(self,nums):
-
-
+        return None
 
 '''数组中的每个值表示在当前位置最多能向前面跳几步，判断给出的数组是否否存在一种跳法跳到最后。'''
 class Solution(object):
@@ -535,3 +534,37 @@ class Solution(object):
 
 if __name__ == "__main__":
     Solution().jump([1,3,4,2])
+
+'''对两个二进制的字符串求和'''
+class Solution(object):
+    def searchRange(self,nums,target):
+        length = len(nums)
+        result = []
+        start = 0
+        end = length
+        while start < end:
+            mid = (start + end) // 2
+            if nums[mid] == target and (start == 0 or nums[mid - 1] != target):
+                result.append(mid)
+                break
+            if nums[mid] < target:
+                start = mid + 1
+            else:
+                end = length
+        if not result:
+            return [-1,-1]
+        end = length
+        while start < end:
+            mid = (start + end) // 2
+            if nums[mid] == target and (end == length or nums[mid + 1] != target):
+                result.append(mid)
+                break
+            if nums[mid] <= target:
+                start = mid + 1
+            else:
+                end = length
+        return result
+
+if __name__ == "__main__":
+    Solution().searchRange([1,3,4,2,4,4],4)
+
