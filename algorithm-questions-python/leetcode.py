@@ -568,3 +568,4 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().searchRange([1,3,4,2,4,4],4)
 
+'''计算一个凹凸不平的模型中可以存放多少的雨水'''
