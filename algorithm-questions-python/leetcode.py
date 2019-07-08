@@ -572,3 +572,9 @@ if __name__ == "__main__":
 
 
 '''在一个集合（没有重复数字）中找到和为特定值的所有组合'''
+class Solution(object):
+    def combination(self,target,nums):
+        if not nums:
+            return 0
+        result = []
+        
