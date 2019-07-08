@@ -575,6 +575,27 @@ if __name__ == "__main__":
 class Solution(object):
     def combination(self,target,nums):
         if not nums:
-            return 0
+            return []
         result = []
+        nums.sort()
+        self.combination(target,nums,[],result)
+        return result
+    
+    def combination(self,target,nums,current,result):
+        s = sum(current) if current else 0
+        if s > target:
+            return result
+        elif s == target:
+            result.append(current)
+            return
+        else:
+            for i,v in enumerate(current):
+                self.combination(target,nums[i:],nums[i] + v,result)
+
+if __name__ == "__main__":
+    Solution().combination(8,[3,2,5,3,2,3])
+
+
         
+
+
