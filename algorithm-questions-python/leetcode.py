@@ -584,13 +584,13 @@ class Solution(object):
     def combination(self,target,nums,current,result):
         s = sum(current) if current else 0
         if s > target:
-            return result
+            return 
         elif s == target:
             result.append(current)
             return
         else:
-            for i,v in enumerate(current):
-                self.combination(target,nums[i:],nums[i] + v,result)
+            for i,v in enumerate(nums):
+                self.combination(target,nums[i:],current + v,result)
 
 if __name__ == "__main__":
     Solution().combination(8,[3,2,5,3,2,3])
