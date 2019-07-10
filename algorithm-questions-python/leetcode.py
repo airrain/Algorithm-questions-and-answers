@@ -595,6 +595,13 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().combination(8,[3,2,5,3,2,3])
 
+'''现给定二进制码的位数，要求打印出格雷码序列'''
+class Solution(object):
+    def greyCode(self,num):
+        result = [(i >> 2) ^ i for i in range(pow(2,num))]
+        return result
+if __name__ == "__main__":
+    Solution().greyCode(3)
 
         
 
