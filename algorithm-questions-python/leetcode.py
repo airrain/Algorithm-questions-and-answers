@@ -603,6 +603,15 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().greyCode(3)
 
-        
+'''现在有如下的字母与数字的对应关系：1-A, 2-B, ...26-Z。给定一个由数字组成的字符串，判断按照上面的映射可以转换成多少种不同的字符串'''
+
+
+'''机器人从起点到终点有多少条不同的路径，只能向右或者向下走'''
+import math
+class Solution(object):
+    def findRoad(self,m,n):
+        m -= 1
+        n -= 1
+        return math.factorial(m + n)/math.factorial(m)/math.factorial(n)
 
 
