@@ -616,5 +616,7 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().findRoad(4,6)
 
-
+'''更常见的一种做法就是动态规划，要到达一个格子只有从它上面或者左边的格子走过来，递推关系式：dp[i][j]=dp[i-1][j]+dp[i][j-1]'''
+class Solution(object):
+    def 
 
