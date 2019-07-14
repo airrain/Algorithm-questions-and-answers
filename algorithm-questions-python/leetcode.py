@@ -629,3 +629,12 @@ if __name__ == "__main__":
 
 '''找出一个由纯数字组成的序列能够构成的不同的IP地址。'''
 
+'''求一个数的平方根。'''
+class Solution(object):
+    def mySqrit(self,x):
+        result = 1
+        while abs(result * result - x) > 0.1:
+            result = (result + x/result)/2
+        return result
+if __name__ == "__main__":
+    Solution().mySqrit(3) 
