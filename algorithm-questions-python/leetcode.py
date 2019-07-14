@@ -638,3 +638,13 @@ class Solution(object):
         return result
 if __name__ == "__main__":
     Solution().mySqrit(3) 
+
+'''给定一个由不同数字组成的集合，罗列出该集合的所有子集'''
+class Solution(object):
+    def findSets(self,nums):
+        result = [[]]
+        for num in sorted(nums):
+            result += [item + [num] for item in result]
+        return result
+if __name__ == "__main__":
+    Solution().findSets([2,4,3,3]) 
