@@ -648,3 +648,5 @@ class Solution(object):
         return result
 if __name__ == "__main__":
     Solution().findSets([2,4,3,3]) 
+
+'''化简Unix系统下一个文件的绝对路径'''
