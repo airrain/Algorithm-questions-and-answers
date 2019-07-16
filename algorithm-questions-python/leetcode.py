@@ -662,3 +662,16 @@ def findMinId(self,nums):
         i = i + 1
 
 '''输入三个字符串s1、s2和s3，判断第三个字符串s3是否由前两个字符串s1和s2交替而成且不改变s1和s2中各个字符原有的相对顺序'''
+
+'''将一个二维数组排列成金字塔的形状，找到一条从塔顶到塔底的路径，使路径上的所有点的和最小，从上一层到下一层只能挑相邻的两个点中的一个。'''
+class Solution(object):
+    def findMinumTotal(self,triangle):
+        n = len(triangle)
+        dp = triangle[-1]
+        for j in range(n - 2,-1,-1):
+            for i in range(i + 1):
+                dp[j] = triangle[i][j] + min(dp[j],dp[j + 1])
+        return dp[0]
+if __name__ == "__main__":
+    Solution().findMinumTotal([[2]
+                              [3,4]])
