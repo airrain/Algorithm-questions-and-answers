@@ -650,3 +650,15 @@ if __name__ == "__main__":
     Solution().findSets([2,4,3,3]) 
 
 '''化简Unix系统下一个文件的绝对路径'''
+
+'''罗列出一个包含重复数字的集合的所有的子集'''
+
+'''查找最小的可用id'''
+def findMinId(self,nums):
+    i = 0
+    while True:
+        if i not in nums:
+            return i
+        i = i + 1
+
+'''输入三个字符串s1、s2和s3，判断第三个字符串s3是否由前两个字符串s1和s2交替而成且不改变s1和s2中各个字符原有的相对顺序'''
