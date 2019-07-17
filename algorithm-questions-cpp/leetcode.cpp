@@ -1,4 +1,6 @@
-//#include<iostream.h>
+#include<iostream>
+#include<map>
+using name std
 //输入字符串，打印出其全排列
 
 //判断回文串解法一
@@ -125,11 +127,19 @@ void helan(int arr[],int n){
 
 //Partition函数
 int Partition(int data[],int length,int start,int end){
-    if(data == NULL || length <= 0 || start > end || end > length){
-        return
+    if(data == 0 || length <= 0 || start > end || end > length){
+        return 0
     }
-    index = RandomInrange(start,end);
-
-
+    // int index = random(start,end);
 }
 
+//如何统计⼀段⽂字中每个单词出现的次数
+int main(int,char**){
+    map<string,int> dict;
+    string s;
+    while(cin>>s)
+        ++dict[s];
+    map<string,int>::iterator it = dict.begin()
+    for(;it != dict.end();++it)
+        cout<<it->first<<": "<<it->second<<"\n";
+}
