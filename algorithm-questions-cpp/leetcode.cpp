@@ -143,3 +143,27 @@ int main(int,char**){
     for(;it != dict.end();++it)
         cout<<it->first<<": "<<it->second<<"\n";
 }
+
+//二叉搜索树的节点
+template <class T>
+struct node{
+	node(T x):key(x),left(0),right(0),parent(0){}
+	~node(){
+		delete left;
+		delete right;
+	}
+	node* left;
+	node* right;
+	node* parent;
+	T key;
+	
+};
+
+
+
+
+
+
+
+
+ 

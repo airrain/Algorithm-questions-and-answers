@@ -675,3 +675,5 @@ class Solution(object):
 if __name__ == "__main__":
     Solution().findMinumTotal([[2]
                               [3,4]])
+
+'''Dungeon Game'''
